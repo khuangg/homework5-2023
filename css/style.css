@@ -1,16 +1,13 @@
-/* Step 1 do this later */
-/* Animate the logo with keyframes.  (Here is a keyframes reference.) It should start at a width of 25px and grow to 475px.  It should also start with an opacity of 0 and end with an opacity of 1. The animation should take 5 seconds and only happen when the page is loaded. You can complete this step later in the process - it won’t affect the larger views.  */
+/* Step 1*/
 
-
-img{
-    animation: 5s;
+#logo{
+    animation: mymove 5s;
 }
 
 @keyframes mymove{
     0% {width: 25px; opacity: 0;}
     100% {width: 475px;; opacity: 1;}
 }
-
 
 /* Step 2 - Default mode */
 /* Edit the body element to use the Poppins font (using Google fonts) with serif as a backup.  It should also use the image “concrete_seamless.png” as a background-image with a backup color of #f1f1f1. */
@@ -93,6 +90,7 @@ solid 2px border using #45ADAD,
     width: 300px;
 }
 
+
 /* Step 10 */
 /* Edit the css for the gallery class to use flex to match our example. (You may want to look at the screen shots from 1200px and 1500px as well -  the changes are not from media queries, but from the use of flex.) */
 
@@ -101,6 +99,8 @@ solid 2px border using #45ADAD,
     flex-wrap: wrap;
     justify-content: center;
 }
+
+/* Screen-size is greater than 900px */
 
 /* Step 11 */
 /* Edit the css for the header tag (all instances) and the nav_links class to match our example using flex-properties. The logo should be as far to the left as possible and the links as far to the right as possible. Use flex properties, NOT position properties. */
@@ -127,8 +127,8 @@ solid 2px border using #45ADAD,
         justify-content: center;
         align-items: center;
     }
-/* 
-    body header:first-of-type{
+
+    /* header:first-of-type{
         position: fixed;
         width: 100%;
     } */
@@ -153,9 +153,13 @@ solid 2px border using #45ADAD,
       background-repeat: no-repeat;
     }
 
-     li .nav_item{
-        display: flex;
-        /* flex-direction: row; */
+    .nav_links{
+        flex-direction: row;
+        justify-content: space-around;
+    } 
+
+    nav{
+        width: 100%;
     }
 
     .card{
@@ -164,31 +168,15 @@ solid 2px border using #45ADAD,
     }
 
     #gallery, .gallery{
-        visibility: hidden;
+        display: none;
+    }
+
+    .pricing{
+        align-items: flex-end;
+        flex-wrap: nowrap;
+    }
+
+    .card li:nth-child(2):after{
+        content: '\1F44D'
     }
   }
-
-/* Step 16 */
-/* The background image should be removed.  */
-
-
-/* Step 17 */
-/* Edit the nav/nav_links elements so that they are spaced according to the image above. */
-
-
-/* Step 18 */
-/* Edit the pricing class so that the elements align along the bottom.  As long as it aligns along the bottom we don't care if the cards aren't the same height. */
-
-
-/* Step 19 */
-/* The card elements should have a solid border 2px of #45ADDD and use flex-basis of 325px.  */
-
-
-
-/* Step 20 */
-/* No part of the gallery should be visible. */
-
-
-
-/* Step 21 */
-/* Without using list-style-type add the thumbs up entity as shown in the cards. This is a challenge problem. You should not give or receive help when completing it.**For some people the thumbs up is not printing as yellow. That is fine. */
